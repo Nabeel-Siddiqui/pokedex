@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import PokeDex from './components/PokeDex.js';
-import NavBar from './components/NavBar.js';
 import './App.css';
 
 
@@ -20,6 +19,8 @@ function App() {
 
   let input = search;
 
+  //nextPokemon and previousPokemon are created by adding or subtracting 1 from the current pokemonIndex, the pokemonIndex is the parameter that is used in the API
+
   function nextPokemon () {
     Math.min(setPokemonIndex(pokemonIndex + 1, 807))
   }
@@ -27,6 +28,11 @@ function App() {
   function previousPokemon () {
     Math.max(setPokemonIndex(pokemonIndex - 1, 1));
   }
+
+  // There are two fetches being run, one that handles the next and previous pokemons and the other is based on search, the next and previous will fetch data based on the current pokemonIndex.
+  // the second fetch is for the search input, the fetch will return data only if a correct pokemon is entered
+  // there is an if else statement, this is used to determine if a pokemon is being searched for, if the search field is empty, the next/previous pokemon will show, if a pokemon name has been entered,
+  // the pokemon searched for will show, both sets of data are placed as objects in an array
 
   useEffect(() => {
     const fetchData = async () => {

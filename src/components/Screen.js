@@ -10,7 +10,9 @@ console.log(TypeColors)
 
 const Screen = ( props ) => {
 
-    
+    //the data is being passed in and manipulated, so since all pokemons don't have the same number of moves, and abilities that is being mapped through and displaying what is present.
+    //the stats for the pokemon are all the same, they all have HP,Attack, etc. Another ternay is used, if the search function isn't being used then the showPokemon will be displayed
+    // if the search box is being used the showSearch will be displayed.
 
     let pokemon = props.pokemon;
     let search = props.search;
