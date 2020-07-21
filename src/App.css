@@ -1,3 +1,26 @@
-div.pokedex {
-    text-align: center;
+html {
+    font-family: 'Press Start 2P', cursive;
 }
+
+.pokedex {
+    width: 900px;
+    height: 700px;
+    margin: auto;
+    background-color: white;
+    border: #88061c 10px solid;
+    border-top-width: 20px;
+    z-index: 2;
+    display: flex;
+    grid-template-columns: 5% 40% 10% 40% 5%;
+    grid-template-rows: 3% 12% 40% 20% 20% 5%;
+    border-radius: 2%;
+    font-family: 'Press Start 2P', cursive;
+};
+
+.divider {
+    background-color: #88061c;
+    grid-column-start: 5;
+    grid-row-start: 5;
+    grid-row-end: 5;
+    margin: 0 25px;
+};

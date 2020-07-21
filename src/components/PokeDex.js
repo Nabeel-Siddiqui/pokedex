@@ -11,7 +11,7 @@ const PokeDex = ( props ) => {
     return (
         <div>
 
-        {isLoaded ? <Screen key={props.pokemon.id} pokemon={props.pokemon} search={props.search} input={props.input}/> : <p>PAGE IS LOADING.......</p>}
+        {isLoaded ? <Screen key={props.pokemon.id} pokemon={props.pokemon} search={props.search} input={props.input} next={props.next} previous={props.previous}/> : <p>PAGE IS LOADING.......</p>}
 
         </div>
     )

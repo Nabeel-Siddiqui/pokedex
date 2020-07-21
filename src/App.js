@@ -88,16 +88,11 @@ function App() {
   return(
 
     <div className='pokedex'>
-
-    <NavBar/>
-
+      <PokeDex search={searchPokemon} pokemon={pokemonData} input={input} next={nextPokemon} previous={previousPokemon}/>
       <form>
-        <input type='text' value={search} onChange={event => setSearch(event.target.value)}/>
+          <input type='text' placeholder='search pokemon...' value={search} onChange={event => setSearch(event.target.value)}/>
       </form>
 
-      <button onClick={previousPokemon}>BACK</button>  <button onClick={nextPokemon}>NEXT</button>
-
-      <PokeDex search={searchPokemon} pokemon={pokemonData} input={input}/>
       
     </div>
 
