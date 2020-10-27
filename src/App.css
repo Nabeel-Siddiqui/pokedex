@@ -1,4 +1,4 @@
-html {
+/* html {
     font-family: 'Press Start 2P', cursive;
 }
 
@@ -23,4 +23,33 @@ html {
     grid-row-start: 5;
     grid-row-end: 5;
     margin: 0 25px;
-};
+}; */
+
+
+.App {
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 10vh;
+    background: rgb(73, 79, 82);
+    color: white;
+}
+
+.nav-links {
+    width: 45%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+}
+
+.logo {
+    height: 50%;
+    width: 30%;
+    filter: white(100%);
+    -webkit-filter: white(100%);
+}
