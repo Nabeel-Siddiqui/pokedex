@@ -23,7 +23,7 @@ const PokeDex = ( props ) => {
     // console.log(isLoaded)
     // console.log(search)
 
-    let pokemonTypes =pokemon.types.map(types => types)
+    // let pokemonTypes =pokemon.types.map(types => types)
 
     const showPokemon = () => {
         return (

@@ -3,12 +3,10 @@ import axios from 'axios';
 
 import '../styling/pokeball.css'
 
+const ImageURL = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/"
+const URL = 'https://pokeapi.co/api/v2/pokemon/'
 
-function CatchPokemon(props) {
-  // console.log(props)
-
-  const ImageURL = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/"
-  const URL = 'https://pokeapi.co/api/v2/pokemon/'
+function CatchPokemon() {
 
   const [pokeball, setPokeBall] = useState([])
   const [wildPokemon, setWildPokemon] = useState({});
@@ -46,20 +44,6 @@ function CatchPokemon(props) {
   function releasePokemon(id) {
     setPokeBall(state => state.filter(p => p.id !== id));
   }
-
-  // const storage = [
-  //   {name: wildPokemon.name},
-  //   {id: wildPokemon.id},
-  //   {img: ImageURL + wildPokemon.id + ".png" }
-  // ]
-
-  // localStorage.setItem("pokemonName", wildPokemon.name)
-  // localStorage.setItem("pokemonID", wildPokemon.id)
-  // localStorage.setItem("pokemonImage", ImageURL + wildPokemon.id + ".png")
-
-  // localStorage.getItem("pokemonImage", "pokemonName","pokemonID" )
-  
-  // console.log(localStorage)
 
   return (
     <div className="app-wrapper">

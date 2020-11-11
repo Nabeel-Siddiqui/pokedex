@@ -10,10 +10,23 @@ import LoadingScreen from './components/LoadingScreen.js';
 import CatchPokemon from './components/CatchPokemon.js';
 
 
+import {useSelector, useDispatch} from 'react-redux'
+import Login from './components/Login.js'
+import SignUp from './components/SignUp.js'
+import {autoLogin} from './actions/userActions'
+
+
+
 function App() {
 
+  const userReducer = useSelector(state => state.userReducer)
+  const dispatch = useDispatch()
+  useEffect(() => {
+    dispatch(autoLogin())
+  }, [])
+
+
   const URL = "https://pokeapi.co/api/v2/pokemon/";
-  
 
   let pokemonID = 1;
 
@@ -100,20 +113,27 @@ function App() {
   // console.log(searchPokemon)
   // console.log(pokemonIndex)
 
+
+
   return(
+
     <Router>
       <div className="App">
         <Nav/>
           <form>
             <input type='text' placeholder='search pokemon...' value={search} onChange={event => setSearch(event.target.value)}/>
           </form>
+          {!userReducer.loggedIn ? <h1>Sign Up or Login!</h1> : <h1>Welcome, {userReducer.user.username}</h1>}
+
           <Switch>
             <Route path="/" exact render={() => <LoadingScreen search={searchPokemon} pokemon={pokemonData} input={input} next={nextPokemon} previous={previousPokemon} random={randomID()}/>}/>
             <Route path="/catchpokemon" render={() => <CatchPokemon/>}/>
+            <Route path="/signup" render={() => <SignUp/>}/>
+            <Route path="/login" render={() => <Login/>}/>
           </Switch>
       </div>
     </Router>
   );
 }
 
-export default App;
+export default App
