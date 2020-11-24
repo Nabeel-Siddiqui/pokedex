@@ -23,7 +23,7 @@ function App() {
   const dispatch = useDispatch()
   useEffect(() => {
     dispatch(autoLogin())
-  }, [])
+  }, []);
 
 
   const URL = "https://pokeapi.co/api/v2/pokemon/";
