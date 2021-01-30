@@ -1,9 +1,7 @@
 # True Pokédex
 ![alt text](https://github.com/Nabeel-Siddiqui/pokedex/blob/master/public/logo.png)
+<br>
 Interactive Pokédex and game web app. [See it live!](https://true-pokedex.netlify.app/)
-
-## Description
-
 
 ## Technologies
 Frontend
@@ -27,8 +25,6 @@ Frontend Installation
 * Fork or clone this repo ```git clone https://github.com/Nabeel-Siddiqui/pokedex```
 * ```cd``` to ```pokedex```
 * run ```npm i && npm start``` 
-
-<img src="https://github.com/Nabeel-Siddiqui/pokedex/blob/master/public/screenshot.png" width="700">
 
 ## Contact
 Created by [Nabeel Siddiqui](https://www.https://nabeelsiddiqui.netlify.app/) - feel free to contact me!
